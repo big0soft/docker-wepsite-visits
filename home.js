@@ -10,7 +10,7 @@ const client = redis.createClient({
 client.set('visitsCounter',0)
 app.get('/',(req,res)=>{
     client.get('visitsCounter',(err,visitsCounter) => {
-        res.send('VisitsCounter :'+visitsCounter);
+        res.send('visits counter :'+visitsCounter);
         client.set('visitsCount',parseInt(visitsCounter)+1);
     })
 })
