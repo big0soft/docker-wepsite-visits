@@ -1,0 +1,8 @@
+services:
+  redis:
+    image: 'redis'
+  node:
+   build: .  
+   ports:
+    - "8008:8080"
+    
